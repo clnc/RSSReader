@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
       <Label alignment="CENTER" lineSpacing="1.5" text="Login" textFill="#243594">
          <font>
@@ -26,7 +26,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField maxWidth="250.0" prefHeight="25.0" prefWidth="250.0">
+      <TextField maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" fx:id="txtEmail">
          <VBox.margin>
             <Insets bottom="15.0" />
          </VBox.margin>
@@ -45,7 +45,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField maxWidth="250.0">
+      <TextField maxWidth="250.0" fx:id="txtPassword">
          <VBox.margin>
             <Insets bottom="30.0" />
          </VBox.margin>
@@ -59,7 +59,7 @@
       <HBox maxWidth="250.0" prefHeight="100.0" prefWidth="250.0">
          <children>
             <Region prefHeight="100.0" prefWidth="201.0" />
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Login">
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Login" id="btnLogin" onAction="#handleLogin">
                <font>
                   <Font size="16.0" />
                </font>
