@@ -26,9 +26,10 @@ public class LoginManager {
 	
 	public void showHomeScreen(String name) {
 		try {
+			HomeController.setLabelName(name);
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/HomeView.fxml"));
 			scene.setRoot((Parent) loader.load());
-			HomeController.setLabelName(name);
+			
 			Stage window = new Stage();
 			window.setScene(scene);
 		    window.show();

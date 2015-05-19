@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
       <Label alignment="CENTER" lineSpacing="1.5" text="Login" textFill="#243594">
@@ -26,7 +25,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField maxWidth="250.0" prefHeight="25.0" prefWidth="250.0" fx:id="txtEmail">
+      <TextField fx:id="txtEmail" maxWidth="250.0" prefHeight="25.0" prefWidth="250.0">
          <VBox.margin>
             <Insets bottom="15.0" />
          </VBox.margin>
@@ -45,7 +44,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField maxWidth="250.0" fx:id="txtPassword">
+      <TextField fx:id="txtPassword" maxWidth="250.0">
          <VBox.margin>
             <Insets bottom="30.0" />
          </VBox.margin>
@@ -56,16 +55,21 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </TextField>
-      <HBox maxWidth="250.0" prefHeight="100.0" prefWidth="250.0">
+      <HBox maxWidth="250.0" prefHeight="60.0" prefWidth="250.0">
          <children>
-            <Region prefHeight="100.0" prefWidth="201.0" />
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Login" id="btnLogin" onAction="#handleLogin">
+            <Region prefHeight="60.0" prefWidth="176.0" />
+            <Button id="btnLogin" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="100.0" text="Login">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
          </children>
       </HBox>
+      <Label fx:id="lblMessage" textFill="#ee2828">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
    <padding>
       <Insets bottom="30.0" left="70.0" right="30.0" top="50.0" />
