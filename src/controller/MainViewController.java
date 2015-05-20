@@ -13,7 +13,7 @@ public class MainViewController extends Application{
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		RSSParser rss = new RSSParser();
-		rss.parseFeed();
+		rss.parseFeed("http://rss.realitatea.net/actual.xml");
 		launch(args);
 	}
 

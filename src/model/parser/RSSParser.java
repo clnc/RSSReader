@@ -11,26 +11,25 @@ import com.sun.syndication.io.XmlReader;
 
 public class RSSParser {
 
-		public void parseFeed() throws IOException{
-			URL url  = new URL("http://rss.cnn.com/rss/edition.rss");
+		public void parseFeed(String rssURL) throws IOException{
+			URL url  = new URL(rssURL);
 			XmlReader reader = null;
 			
-			 
 			try {
-			  
-			  reader = new XmlReader(url);
-			  SyndFeed feed = new SyndFeedInput().build(reader);
-			  System.out.println("Feed Title: "+ feed.getAuthor());
+				reader = new XmlReader(url);
+				SyndFeed feed = new SyndFeedInput().build(reader);
+				System.out.println("Feed Title: "+ feed.getAuthor());
 			 
-			     for (Iterator i = feed.getEntries().iterator(); i.hasNext();) {
-			    	SyndEntry e = (SyndEntry) i.next();
+				for (Iterator i = feed.getEntries().iterator(); i.hasNext();) {
+					SyndEntry e = (SyndEntry) i.next();
 			        System.out.println(e.getTitle());
-			     }
+				}
+				
 			}catch(Exception e){
 				
-			} finally {
-			    if (reader != null)
-			        reader.close();
+			}finally{
+				if (reader != null)
+					reader.close();
 			}
 		}
 	
