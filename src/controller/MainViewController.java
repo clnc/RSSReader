@@ -1,6 +1,9 @@
 package controller;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import model.entities.New;
 import model.parser.RSSParser;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -13,7 +16,15 @@ public class MainViewController extends Application{
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		RSSParser rss = new RSSParser();
-		rss.parseFeed("http://rss.realitatea.net/actual.xml");
+		List<New> feeds = rss.parseFeed("http://rss.realitatea.net/actual.xml");
+		System.out.println("Start...");
+		for(New e : feeds){
+			System.out.println("Title: "+e.getTitle());
+			System.out.println("Description: "+e.getDescription());
+			System.out.println("URL: "+e.getGuid());
+			System.out.println("------------------");
+		}
+		System.out.println("End...");
 		launch(args);
 	}
 

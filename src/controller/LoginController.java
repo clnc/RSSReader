@@ -9,9 +9,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 
 public class LoginController implements Initializable{
 
+	@FXML
+	private VBox root;
+	
 	@FXML
 	private TextField txtEmail;
 	
@@ -36,7 +40,7 @@ public class LoginController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-
+		
 	}
 	
 }
