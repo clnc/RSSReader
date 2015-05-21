@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Gazda: localhost
--- Timp de generare: 19 May 2015 la 16:37
+-- Timp de generare: 21 May 2015 la 18:31
 -- Versiune server: 5.5.24-log
 -- Versiune PHP: 5.3.13
 
@@ -88,6 +88,7 @@ CREATE TABLE IF NOT EXISTS `repository` (
   `ID_repository` int(9) NOT NULL AUTO_INCREMENT,
   `ID_user` int(9) NOT NULL,
   `ID_news` int(9) NOT NULL,
+  `ID_cat` int(11) NOT NULL,
   `status` int(2) NOT NULL,
   PRIMARY KEY (`ID_repository`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

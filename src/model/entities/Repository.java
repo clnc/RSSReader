@@ -19,6 +19,8 @@ public class Repository implements Serializable {
 	private int ID_news;
 
 	private int ID_user;
+	
+	private int ID_cat;
 
 	private int status;
 
@@ -39,6 +41,14 @@ public class Repository implements Serializable {
 
 	public void setID_news(int ID_news) {
 		this.ID_news = ID_news;
+	}
+
+	public int getID_cat() {
+		return ID_cat;
+	}
+
+	public void setID_cat(int iD_cat) {
+		ID_cat = iD_cat;
 	}
 
 	public int getID_user() {
