@@ -1,14 +1,13 @@
 package controller;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
-import model.entities.New;
-import model.parser.RSSParser;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import model.entities.New;
+import model.parser.RSSParser;
 
 
 public class MainViewController extends Application{
