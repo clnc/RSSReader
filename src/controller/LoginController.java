@@ -5,11 +5,10 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import view.ScreenManager;
 
 public class LoginController implements Initializable{
 
@@ -27,12 +26,23 @@ public class LoginController implements Initializable{
 	
 	@FXML
 	private void handleLogin(){
-		if("test".equals(txtEmail.getText()) && "test".equals(txtPassword.getText())){
-			Scene scene = new Scene(new StackPane());
-			LoginManager loginManager = new LoginManager(scene);
-		    loginManager.showHomeScreen("Bogdan");
+		if("test@test.com".equals(txtEmail.getText()) && "test".equals(txtPassword.getText())){
+			goToStart();
 		}else{
 			lblMessage.setText("Invalid user and/or password!");
+		}
+		
+	}
+	
+	private void goToStart(){
+		
+		StartController sc;
+		try {
+			ScreenManager manager = new ScreenManager();
+			sc = (StartController) manager.replaceSceneContent("HomeView.fxml");
+			sc.setLblName("Bogdan");
+		} catch (Exception e) {
+			System.err.println("Error loading HomeView.fxml: "+e.getMessage());
 		}
 		
 	}
